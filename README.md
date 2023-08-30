@@ -75,6 +75,14 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
     * 번호의 합이 M보다 작으므로 작은 번호 index를 올린다 : A[i] + A[j] < M일 때, i++;
     * 양쪽 포인터를 모두 이동시키고 count를 증가시킨다 : A[i] + A[j] == M일 때, i++; j--; count++;
 
+  <br>
+
+  * 슬라이딩 윈도우
+    * 시간복잡도가 O(n) 이라 주어진 문제의 max값이 클 때 유용하게 사용할 수 있음.
+    * 크기가 정해진 부분 문자열 (윈도우) 를 이동시키면서, 크기를 유지한 상태로 윈도우를 이동시키면서 조건에 맞는지 탐색하는 방법
+    * <img width="506" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/62a62241-25e8-41e7-b294-a4c823e71b8f">
+
+
 
 
 
