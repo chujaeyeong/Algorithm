@@ -66,6 +66,14 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
     * <img width="404" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/73367c95-5cbc-496e-9e44-21a423927ba4">
 
     * i에서 j까지의 구간 합을 구하는 공식 : S[j] - S[i-1]
+   
+  <br>
+
+  * 투 포인터
+    * 투포인터의 이동 원칙
+    * 번호의 합이 M보다 크므로 큰 번호 index 를 내린다 : A[i] + A[j] > M일 때, j--;
+    * 번호의 합이 M보다 작으므로 작은 번호 index를 올린다 : A[i] + A[j] < M일 때, i++;
+    * 양쪽 포인터를 모두 이동시키고 count를 증가시킨다 : A[i] + A[j] == M일 때, i++; j--; count++;
 
 
 
