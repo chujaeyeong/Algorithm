@@ -53,6 +53,35 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
     * 포인터를 저장할 공간이 필요하므로, 배열보다는 구조가 복잡하다
     * 구현되어있는 ArrayList, LinkedList는 삽입, 삭제, 접근이 내부적으로 지원되기 때문에, 쌩 리스트를 구현하는 경우는 거의 없음 (쌩 리스트를 구현하는건 난이도가 상당히 높음)
 
+  <br>
+  
+  * 구간 합
+    * 구간 합은 합 배열을 이용하여 시간 복잡도를 더 줄이기 위해 사용하는 특수한 목적의 알고리즘이다.
+    * <img width="404" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/97c6e441-36dd-472d-8d05-3c520c991e28">
+
+    * 합 배열 S를 만드는 공식 : S[i] = S[i-1] + A[i]
+
+    <br>
+
+    * <img width="404" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/73367c95-5cbc-496e-9e44-21a423927ba4">
+
+    * i에서 j까지의 구간 합을 구하는 공식 : S[j] - S[i-1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </details>
