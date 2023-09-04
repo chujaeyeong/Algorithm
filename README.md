@@ -162,6 +162,21 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
     * <img width="668" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/c4e5952f-0661-4cbe-b2f1-3e54a1142ff1"> 
 
     
+  <br>
+  
+  ##### `섹션 3) 탐색`
+
+  * DFS (깊이 우선 탐색)
+    * 깊이 우선 탐색 (DFS : depth-first search) 은 그래프 완전 탐색 기법 중 하나이며, 그래프의 시작 노드에서 출발하여 탐색할 한 쪽 분기를 정하여 최대 깊이까지 탐색을 마친 후 다른 쪽 분기로 이동하여 다시 탐색을 수행하는 알고리즘이다
+    * 재귀 함수르 구현하고, 스택 자료구조를 이용한다 (FILO)
+    * 시간 복잡도는 O(V + E) (여기서 V : 노드 수 / E : 예지 수 이다.)
+    * DFS은 실제 구현 시 재귀함수를 이용하므로, 스택 오버플로에 유의해야함.
+    * DFS는 한 번 방문한 노드를 다시 방문하면 안 되므로, 노드 방문 여부를 체크할 배열이 필요
+    * <img width="796" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/eb8c56ef-d583-46fd-bba6-c8e21fe70050">
+    * <img width="796" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/c174e576-08b8-4149-b665-6e3e78018c47">
+    * <img width="796" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/52c51a6b-a9ae-4403-90d0-6cb159c434d1">
+
+
 
 
 
