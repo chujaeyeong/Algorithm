@@ -9,8 +9,8 @@ class Main {
 		long pi = n;
         
         // 오일러 피 함수 실행 
-        // (오일러 피 함수는 2부터 시작, i*i<=n 보다 Math.sqrt()함수(제곱근 루트 구하는) 쓰는게 시간 초과 발생을 줄인다) 
-        for(long i=2; i <= Math.sqrt(n); i++) {
+        // (오일러 피 함수는 2부터 시작)
+		for(long i=2; i*i<=n; i++) {
 			if(n%i==0) {
 				pi = pi/i*(i-1);
 			}
