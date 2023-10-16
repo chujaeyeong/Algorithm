@@ -403,8 +403,38 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
            <img width="634" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/120394e2-fe3e-4f92-9c26-877f4dd5efa7">
 
-           이렇게 그림에서처럼 재귀 함수를 빠져나오면서 find 연산으로 값이 다 업데이트되니까 시간 복잡도 향상 효과가 있다. 
+           이렇게 그림에서처럼 재귀 함수를 빠져나오면서 find 연산으로 값이 다 업데이트되니까 시간 복잡도 향상 효과가 있다.
 
+  <br>
+  
+  * #### `위상 정렬 (topology sort)`
+    * 위상 정렬이란, 사이클이 없는 방향 그래프에서 노드 순서를 찾는 알고리즘이다. (시간복잡도 : O(V + E))
+    * 위상 정렬의 특징은 사이클이 없어야 한다는 것이다. 또한, 위상정렬에서는 항상 유일한 값으로 정렬되지 않으므로 정답이 여러 개일 수 있다.
+    * 사이클이 존재하면 노드 간의 순서를 명확하게 정의할 수 없으므로 위상 정렬을 적용할 수 없다.
+
+    <br>
+
+    * 위상 정렬의 핵심 이론
+    * 1. 진입 차수에 대한 이해 : 진입 차수(in-degree)는 자기 자신을 가리키는 에지의 개수이다.
+
+         <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/a10a6651-f564-4e96-b260-7ff2532d9d34">
+
+         <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/da927a23-15cb-4d82-9c8c-66bbf31e38df">
+
+         그림에서 그래프는 ArrayList 로 표현했고, 그래프는 사이클이 없는 상태이다. <br>
+         진입 차수 배열 D를 업데이트한다. 1에서 2, 3을 가리키고 있으므로, D[2], D[3] 을 각각 1만큼 증가시신다.
+
+       2. 위상 정렬 배열에 진입 차수가 0인 노드의 값을 저장 
+     
+          <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/ba8ac2fa-2e03-4f05-88ae-054afacfb578">
+
+          <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/88b1c569-a9e6-42ba-ae96-24ce77ff13e1">
+
+          진입 차수 배열에서 진입 차수가 0인 노드를 선택하고, 선택된 노드를 정렬 배열에 저장, 그 후 인접 리스트에서 선택된 노드가 가리키는 노드들의 진입 차수를 1씩 뺀다.
+
+       3. 2번 과정 반복 후 위상 정렬 배열 종료
+     
+          <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/130a0f6f-039c-43cc-9912-5312497ef002">
 
 
 
