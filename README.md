@@ -437,6 +437,14 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
           <img width="572" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/130a0f6f-039c-43cc-9912-5312497ef002">
 
 
+    <br>
+
+    * 위상 정렬의 수행 과정
+      * 1. 진입 차수가 0인 노드를 큐에 저장한다.
+        2. 큐에서 데이터를 poli해서 해당 노드를 탐색 결과에 추가하고, 해당 노드가 가리키는 노드의 진입 차수를 1씩 감소한다.
+        3. 감소했을 때 진입 차수가 0이 되는 노드를 큐에 offer 한다.
+        4. 큐가 빌 때까지 1~3번 과정을 반복한다. 
+
 
   
 </details>
