@@ -557,6 +557,49 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
            여기서 완성된 리스트는 모든 노드 간의 최단 거리를 알려준다. (ex. 1번 -> 5번 최단 거리는 D[1][6]=6)
 
+  <br>
+
+  * #### `최소 신장 트리 (minimum spanning tree, MST) - 크루스칼`
+    * 최소 신장 트리란, 그래프에서 모든 노드를 연결할 때 사용된 에지들의 가중치의 합을 최소로 하는 트리다.
+    * 최소 신장 트리의 특징은 ① 사이클이 포함되면 가중치의 합이 최소가 뒬 수 없으므로 사이클을 포함하지 않는다, ② N개의 노드가 있으면 최소 신장 트리를 구성하는 에지의 개수는 항상 N-1 개다.
+
+    <br>
+    
+    * 최소 신장 트리의 핵심 이론
+      * 1. 에지 리스트로 그래프를 구현하고 유니온 파인드 리스트로 초기화하기 (사이클 판별을 위함)
+       
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/eabdcb5f-28dc-4910-a861-ac1928bdb626">
+
+           최소 신장 트리는 데이터를 노드가 아닌 에지 중심으로 저장한다. 그래서 인접 리스트가 아닌 **에지 리스트** 형태로 저장한다. <br>
+           이 리스트는 일반적으로 노드 변수 2개와 가중치 변수로 구성된다. 사이클 처리를 위한 유니온 파인드 리스트도 함께 초기화한다. 리스트의 인덱스를 해당 자리의 값으로 초기화하면 된다.
+
+        2. 그래프 데이터를 가중치 기준으로 정렬하기
+       
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/7f2096bb-89d7-4daa-b791-bdc23f35aef2">
+
+           에지 리스트에 담긴 그래프 데이터를 가중치 기준으로 오름차순 정렬한다.
+
+        3. 가중치가 낮은 에지부터 연결 시도하기
+       
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/af7c6b79-f62d-41df-9e57-bc907c97f55e">
+
+           가중치가 낮은 에지부터 순서대로 선택해서 연결을 시도한다. 이때, 바로 연결하지 않고, 이 에지를 연결했을 때 그래프에 사이클 형성 유무를 find 연산을 이용해서 확인한 후 사이클이 형성되지 않을 때만 union 연산을 이용해서 두 노드를 연결한다.
+
+        4. 과정 3번을 연결한 에지의 개수가 N-1이 될 때까지 반복
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/3096018d-7443-4a37-84db-a3203d694d07">
+
+        5. 총 에지 비용 출력하기
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/e659a6e4-fe71-4e1f-be64-caba28fc172e">
+
+
+           
+
+
+
+
+
            
 
 
