@@ -593,23 +593,36 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
            <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/e659a6e4-fe71-4e1f-be64-caba28fc172e">
 
-
-           
-
+</details>
 
 
+<details>
+  
+  <summary> 📌 섹션 7) 트리 (Tree) </summary>
+
+  * #### `트리 알아보기`
+    * 트리는 노드와 에지로 연결된 그래프의 특수한 형태다. (그래프의 표현으로도 트리를 표현할 수 있다.)
+    * 트리는 그래프이지만 순환 구조를 지니고 있지 않고, 1개의 루트 노드가 존재한다. 
+    * 루트 노드를 제외한 노드는 단 1개의 부모 노드를 갖는다.
+    * 트리의 부분 트리 역시 트리의 모든 특징을 따른다.
+    * ➡️ 트리에서 임의의 두 노드를 이어주는 경로는 유일하다!
+    
+    <br>
+    
+    * 트리의 구성 요소
+
+      <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/6080c8f1-6bfb-4610-b355-deaee6899b3d">
+
+      <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/8ed1b5d2-3fcd-4245-be61-7192d000ef57">
+
+    * 코딩테스트에서의 트리
+      * 1. 그래프로 푸는 트리 문제 : 노드와 에지를 인접리스트로 표현할 수 있으니까 이걸 활용해서 DFS, BFS 알고리즘으로 표현해서 문제를 풀 수 있다. 
+        2. 트리만을 위한 문제 : 트리 중에서 이진 트리, ⭐️세그먼트 트리(index tree), ⭐️최소 공통 조상(LCA) 를 활용해서 문제를 풀 수 있다. 특히 세그먼트 트리와 LCA는 1차원 배열로 트리를 표현한다.
+
+      
 
 
-           
-
-
-
-
-
-
-
-           
-
+      
 
 
 
