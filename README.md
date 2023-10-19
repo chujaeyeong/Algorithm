@@ -731,6 +731,48 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
            <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/af90490e-004c-4556-a8c9-3b881cbd9d83">
 
 
+</details>
+
+
+<details>
+  <summary> 📌 섹션 8) 조합 (Combination) </summary>
+  
+  * #### `조합 핵심 이론`
+    * 조합 (Combination) 은 <sub>n</sub>C<sub>r</sub> 로 표현되고, n가의 숫자 r개를 뽑는 경우의 수를 뜻한다.
+    * 조합과 비교되는 순열은 <sub>n</sub>P<sub>r</sub> 로 표현되고, n개의 숫자 중 r개를 뽑아 순서를 고려해서 나열할 경우의 수를 뜻한다.
+    * 순열과 조합의 차이는 순서의 고려 유무인데, 즉, 조합에서는 데이터 1, 2, 3과 3, 2, 1을 같은 경우라고 판단하고, 순열은 다른 경우로 판단한다.
+    * 실제 코딩테스트에서는 순서를 고려하는 순열 보다는 조합의 출제 빈도 수가 높고, 응용할 수 있는 문제도 많다.
+    * <img width="265" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/b79cdfe0-7f58-4471-9e10-e318e3e2ea5d">
+
+    * 분모에 r!은 순서가 다른 경우의 수를 제거하는 역할을 한다. (그래서 순열 공식에는 분모에 r! 없이 (n-r)! 만 해준다)
+   
+    <br>
+
+    * ⭐️ 조합의 점화식 도출하기
+      * 1. 특정 문제를 가정하기
+
+           <img width="316" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/143a9e3e-eb82-405a-b037-712e8f7bcb1f">
+
+           (여기서는 5개의 데이터에서 3개를 선택하는 조합의 경우의 수를 푸는 문제로 가정한다.)
+
+        2. 모든 부분 문제가 해결된 상황이라고 가정하고 지금 문제 생각하기
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/1ff20990-b64c-4580-9bf2-ffcae667a6ab">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/728ab64e-b818-42e7-a7e1-b99200dc8faf">
+
+        3. 특정 문제를 해결한 내용을 바탕으로 일반 점화식 도출하기 <br>
+           ⭐️ **D[i][j] = D[i-1][j-1] + D[i-1][j]** ⭐️
+           
+
+
+           
+
+           
+
+
+
+
            
 
            
