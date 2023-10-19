@@ -639,7 +639,72 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
         <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/e0dacbb3-59f0-4193-b1ff-12269d096d31">
 
-      
+  <br>
+  
+  * #### `세그먼트 트리`
+    * 세그먼트 트리란, 주어진 데이터의 구간 합과 데이터 업데이트를 빠르게 수행하기 위해 고안해낸 자료구조의 형태다.
+    * 세그먼트 트리의 큰 범위를 인덱스 트리 라고 부르는데, 코딩 테스트에서는 인덱스 트리와 세그먼트 트리 영역은 큰 차이가 없다고 봐도 된다.
+    * 세그먼트 트리의 종류는 구간 합, 최대 최소 구하기로 나눌 수 있고, 구현 단계는 트리 초기화하기, 질의값 구하기 (구간 합 or 최대 최소), 데이터 업데이트하기로 나눌 수 있다.
+    
+    <br>     
+
+    * ⭐️ 세그먼트 트리의 핵심 이론
+      * 1. 트리 초기화하기 <br>
+           리프 노드의 개수가 데이터의 개수(N) 이상이 되도록 트리 배열을 만든다. 트리 배열의 크기를 구하는 방법은 2의 k제곱 >= N 을 만족하는 k의 최솟값을 구한 후, 2의k제곱 * 2 를 트리 배열의 크기로 정의하면 된다.
+     
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/f2aa0372-1f05-4524-9929-7fa7dd987b04">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/4799a253-c990-409b-a8eb-b34285c7aa27">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/421f1608-d126-4937-8709-3f345cb264ab">
+
+        2. 질의값 구하기 <br>
+           주어진 질의 인덱스를 세그먼트 트리의 리프 노드에 해당하는 인덱스로 변경한다. 기존 샘플을 기준으로 한 인덱스 값과 세그먼트 트리 배열에서의 인덱스값이 다르기 때문에 인덱스를 변경해야함!
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/073205cb-70a6-4173-88a7-09ee069e414c">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/1fb55d49-b0cf-4a45-8685-2d3bab25d86c">
+
+           과정 1 ~ 2에서 해당 노드를 선택했다는 것은 해당 노드의 부모가 나타내는 범위가 질의 범위를 넘어가기 때문에 해당 노드를 질의값에 영향을 미치는 **독립 노드**로 선택하고, <br>
+           해당 노드의 부모 노드는 대상 범위에서 **제외**한다는 뜻이다. <br>
+           부모 노드를 대상 범위에서 제거하는 방법은 바로 3 ~ 4에서 질의 범위에 해당하는 부모 노드로 이동하기 위해 인덱스 연산을 index / 2 가 아닌 (index + 1) / 2, (index - 1) / 2 로 수행하는 것이다. <br>
+           (질의에 해당하는 노드를 선택하는 방법은 구간 합, 최댓값 구하기, 최솟값 구하기 모두 동일하며 선택된 노드들에 관해 마지막에 연산하는 방식만 다르다.) <br>
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/a39b1990-dbc6-42a1-bc6b-e6ccab8f99b5">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/29ecdcba-d2c1-4847-a2c1-e42fd20957c7">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/179d55e4-366c-47a9-91fd-f8f242078783">
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/7256412f-e6b0-4f16-a886-d4b722bb2dd7"> <br>
+
+        3. 데이터 업데이트하기 <br>
+           업데이트 방식은 자신의 부모 노드로 이동하면서 업데이트한다는 것은 동일하지만, 어떤 값으로 업데이트할 것인지에 관해서는 트리 타입별로 다르다. <br>
+           (부모 노드로 이동하는 방식은 세그먼트 트리가 이진 트리이므로 index = index / 2 로 변경하면 된다.)
+
+           <img width="631" alt="image" src="https://github.com/chujaeyeong/Algorithm/assets/123634960/387e09a2-a8a8-4309-b80f-0570b6984b02"> 
+
+        <br>
+
+      * 문제를 분석할 때, 계속 구간합을 구하라고 하는 문제는 구간합(합배열) 을 이용하는 경우 시간이 오래 걸리기 때문에 세그먼트 트리 알고리즘을 활용하는게 좋다. (단순 구간합이 아닌 구간합이 반복되는 경우)
+
+        
+
+
+
+
+
+
+
+           
+
+
+           
+
+           
+
+
+           
 
 
   
